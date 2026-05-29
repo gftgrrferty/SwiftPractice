@@ -9,28 +9,92 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        // MARK: - ZStack,VStack,HStackを使ってクリーパーを作成
-        ZStack {
-            Rectangle()
-                .foregroundStyle(.green)
-                .frame(width: 300, height: 300)
-            VStack {
-                HStack {
-                    Rectangle()
-                        .foregroundStyle(.black)
-                        .frame(width: 70, height: 70)
-                    Rectangle()
-                        .foregroundStyle(.black)
-                        .frame(width: 70, height: 70)
+        //MARK: - ZStack,VStack,HStackとかでミニオンを作成(難しかった)
+        VStack {
+            ZStack {
+                Rectangle()
+                    .foregroundStyle(.yellow)
+                    .frame(width: 300, height: 300)
+                VStack {
+                    HStack {
+                        Rectangle()
+                            .foregroundStyle(.black)
+                            .frame(width: 60, height: 20)
+                        ZStack {
+                            Rectangle()
+                                .foregroundStyle(.gray)
+                                .frame(width: 90, height: 90)
+                            Rectangle()
+                                .foregroundStyle(.white)
+                                .frame(width: 70, height: 70)
+                            Rectangle()
+                                .foregroundStyle(.black)
+                                .frame(width: 20, height: 20)
+                        }
+                        ZStack {
+                            Rectangle()
+                                .foregroundStyle(.gray)
+                                .frame(width: 90, height: 90)
+                            Rectangle()
+                                .foregroundStyle(.white)
+                                .frame(width: 70, height: 70)
+                            Rectangle()
+                                .foregroundStyle(.black)
+                                .frame(width: 20, height: 20)
+                        }
+                        Rectangle()
+                            .foregroundStyle(.black)
+                            .frame(width: 60, height: 20)
+                    }
+                    ZStack {
+                        Rectangle()
+                            .foregroundStyle(.black)
+                            .frame(width:70, height: 40)
+                        VStack {
+                            Rectangle()
+                                .foregroundStyle(.white)
+                                .frame(width: 60, height: 10)
+                            Rectangle()
+                                .foregroundStyle(.red)
+                                .frame(width: 60, height: 10)
+                        }
+                    }
                 }
+            }
+            Rectangle()
+                .foregroundStyle(.blue)
+                .frame(width: 300, height: 100)
+            HStack {
                 Rectangle()
                     .foregroundStyle(.black)
-                    .frame(width: 50, height: 20)
+                    .frame(width: 70, height: 30)
                 Rectangle()
                     .foregroundStyle(.black)
-                    .frame(width: 100, height: 80)
+                    .frame(width: 70, height: 30)
             }
         }
+        // MARK: - ZStack,VStack,HStackを使ってクリーパーを作成
+//        ZStack {
+//            Rectangle()
+//                .foregroundStyle(.green)
+//                .frame(width: 300, height: 300)
+//            VStack {
+//                HStack {
+//                    Rectangle()
+//                        .foregroundStyle(.black)
+//                        .frame(width: 70, height: 70)
+//                    Rectangle()
+//                        .foregroundStyle(.black)
+//                        .frame(width: 70, height: 70)
+//                }
+//                Rectangle()
+//                    .foregroundStyle(.black)
+//                    .frame(width: 50, height: 20)
+//                Rectangle()
+//                    .foregroundStyle(.black)
+//                    .frame(width: 100, height: 80)
+//            }
+//        }
         // MARK: - VStackでハンバーガーを作成
 //        VStack {
 //            Rectangle()
