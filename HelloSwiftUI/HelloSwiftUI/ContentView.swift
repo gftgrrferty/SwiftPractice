@@ -17,7 +17,7 @@ struct ContentView: View {
             Text(str)
                 .foregroundColor(Color.red)
             Button("ボタン") {
-                str = "Helo SwiftUI"
+                str = "こんにちは世界"
                 print("ボタンが押されたよ")
             }
         }
