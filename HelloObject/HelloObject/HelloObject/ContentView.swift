@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+        //MARK: - スイッチを作成した
+    @State var isOn = true
+//    MARK: - テキストフィールドを作成した
+//    @State var inputText = ""
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            //MARK: -スイッチを作成した
+            Toggle("スイッチ", isOn: $isOn)
+//            MARK: - テキストフィールドを作成した
+//             TextField("ここに文字を入力してください", text: $inputText)
         }
         .padding()
     }
