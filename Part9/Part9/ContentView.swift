@@ -17,42 +17,42 @@ struct ContentView: View {
                 isshowAlert = true
             }
             .padding()
+            .alert("タイトル", isPresented: $isshowAlert) {//, titleVisibility: .visible)
+                Button("選択肢1") {
+                    
+                }
+                Button("選択肢2") {
+                    
+                }
+                Button("選択肢3") {
+                    
+                }
+    //            Button("選択肢4") {
+    //
+    //            }
+                Button("キャンセル") {//, role: .cancel)
+                    
+                }
+            } message: {
+                Text("ここにメッセージ")
+            }
             
             Button("ダイアログ") {
                 isshowDialog = true
             }
             .padding()
+            .confirmationDialog("本当に削除しますか?", isPresented: $isshowDialog) {
+                Button("削除する", role: .destructive) {
+                    
+                }
+                Button("キャンセル", role: .cancel) {
+                    
+                }
+            } message: {
+                Text("一度削除したら下に戻すことはできません")
+            }
         }
         .padding()
-        .alert("本当に削除しますか?", isPresented: $isshowAlert) {
-            Button("削除する", role: .destructive) {
-                
-            }
-            Button("キャンセル", role: .cancel) {
-                
-            }
-        } message: {
-            Text("一度削除したら下に戻すことはできません")
-        }
-        .confirmationDialog("タイトル", isPresented: $isshowDialog, titleVisibility: .visible) {
-            Button("選択肢1") {
-                
-            }
-            Button("選択肢2") {
-                
-            }
-            Button("選択肢3") {
-                
-            }
-            Button("選択肢4") {
-                
-            }
-            Button("キャンセル", role: .cancel) {
-                
-            }
-        } message: {
-            Text("ここにメッセージ")
-        }
     }
 }
 
