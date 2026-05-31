@@ -29,20 +29,26 @@ struct ContentView: View {
             }
         }
         .font(.title)
-        sheet(isPresented: $isShowContentView2) {
-                ContentView()
+        .sheet(isPresented: $isShowContentView2) {
+            ContentView2(contentView2Count: $count)
         }
     }
 }
 
-struct MyView: View {
+struct ContentView2: View {
+    @Binding var contentView2Count: Int
     var body: some View {
-        Text("ContentView2")
+        Button("+10") {
+            contentView2Count += 10
+        }
+        .font(.title)
+//        Button("-10") {
+//            count -= 10
+//        }
+//        .font(.title)
     }
 }
-#Preview {
-    ContentView()
-}
+
 #Preview {
     ContentView()
 }
