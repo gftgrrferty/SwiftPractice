@@ -8,14 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    //    ここで変数を宣言する
+    @State var nakigoeText = "鳴き声"
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            // テキスト
+            Text(nakigoeText)
+            HStack {
+                Button("🐈") {
+                    // cryTextに"ニャン"を書き換える
+                    nakigoeText = "ニャン"
+                }
+                Button("🐕") {
+                    nakigoeText = "ワンワン"
+                }
+                Button("🐸") {
+                    nakigoeText = "ケロケロ"
+                }
+                Button("🐘") {
+                    nakigoeText = "パオン"
+                }
+            }
+            .buttonStyle(.bordered)
         }
         .padding()
+        .font(.title)
     }
 }
 
