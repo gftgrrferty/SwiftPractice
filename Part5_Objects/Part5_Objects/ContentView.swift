@@ -15,13 +15,14 @@ struct ContentView: View {
             Text("ここはテキストだよ")
                 .font(.system(.title, design: .serif))
                 .background(.green)
+            
             Button {
                 // ボタンを押した時の処理書く
             } label: {
                 Label("リンク", systemImage: "link")
                     .foregroundStyle(.red)
             }
-
+            
             Button {
                 // ボタンを押した時の処理書く
             } label: {
