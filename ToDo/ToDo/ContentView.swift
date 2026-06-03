@@ -40,6 +40,7 @@ struct ContentView: View {
             }
             .navigationTitle("ToDoリスト")
         }
+        .foregroundStyle(.primary)
     }
     // TextFieldを追加する関数
     func addTaskData() {
