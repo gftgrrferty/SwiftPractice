@@ -8,26 +8,52 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isOn = true
+    @State var text = ""
     var body: some View {
         VStack {
-            Text("ここに文字を書く")
-            Button("ボタン") {
+            Text("ここはテキストだよ")
+                .font(.system(.title, design: .serif))
+                .background(.green)
+            Button {
+                // ボタンを押した時の処理書く
+            } label: {
+                Label("リンク", systemImage: "link")
+                    .foregroundStyle(.red)
+            }
+
+            Button {
+                // ボタンを押した時の処理書く
+            } label: {
+                Label("犬ドック", systemImage: "dog")
+                    .foregroundStyle(.purple)
             }
             Button {
                 // ボタンを押した時の処理を書く
             } label: {
-                Text("ボタン")
+                Label("ボタン", systemImage: "folder")
+                    .foregroundStyle(.yellow)
             }
-            .toolbar {
-                Button {
-                    //
-                } label: {
-                    Text("ボタン")
-                    Label("", systemImage: "folder")
-                }
-                .padding()
+            
+            Image(systemName: "star")
+            
+            Image(.うおｗ)
+                .padding(.leading)
+            
+            Toggle("", isOn: $isOn)
+            
+            TextField("", text: $text)
+                .textFieldStyle(.roundedBorder)
+            
+            List {
+                Text("りんご")
+                Text("いちご")
+                Text("スイカ")
+                Text("バナナ")
             }
-        }
+            
+        } // VStack
+        .foregroundStyle(.primary)
         .padding()
     }
 }
