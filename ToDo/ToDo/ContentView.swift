@@ -31,7 +31,6 @@ struct ContentView: View {
                 }
                 .onDelete(perform: deleteTask)
             } //List
-            
             .toolbar {
                 Button(action: {
                     addTaskData()
