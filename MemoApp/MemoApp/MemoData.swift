@@ -1,0 +1,8 @@
+//
+//  MemoData.swift
+//  MemoApp
+//
+//  Created by gftgrrferty on 2026/06/05.
+//
+
+import Foundation
