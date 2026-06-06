@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var memos: [MemoData] = []
     var body: some View {
-        NavigationStack {
-            List {
                 
             }
         }

@@ -6,3 +6,8 @@
 //
 
 import Foundation
+struct MemoData: Identifiable, Equatable, Codable {
+    var id = UUID()
+    var title: String
+    var body: ""
+}
