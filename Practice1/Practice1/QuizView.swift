@@ -50,7 +50,7 @@ struct QuizView: View {
         ),
         // 4
         QuizItem(
-            question: "次のうち、最も首を持つ動物はどれですか？",
+            question: "次のうち、最も長い首を持つ動物はどれですか？",
             choices: ["キリン", "アルパカ", "ゾウ", "ウマ"],
             correctAnswer:"キリン"
         )
