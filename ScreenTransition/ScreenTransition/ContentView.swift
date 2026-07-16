@@ -26,7 +26,7 @@ struct ContentView: View {
                 .sheet(isPresented: $isShowSecondView) {
                     SecondView()
 //                    　　　遷移の大きさを変更できる
-//                        .presentationDetents([.medium])
+//                        .presentationDetents([.])
                 }
             }
             .padding()
